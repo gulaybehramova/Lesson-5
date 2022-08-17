@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// #first {
+//     background-color: green;
+//     width: 40%;
+//     margin: 5rem auto;
+//     text-align: center;
+//     padding: 5px 0px;
+
+//     h1 {
+//         font-style: italic;
+//         color: white;
+//     }
+
+//     button {
+//         background-color: white;
+//         padding: 15px 50px;
+//         transition: .4s;
+
+//         &:hover {
+//             padding: 15px 60px;
+//         }
+//     }
+
+// }
+
+#first{
+    width: 300px;
+    height: 300px;
+    background-color: aqua;
+    animation: myanimation 3s linear infinite;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /*ad,saniye,infinite-sonsuz, yeni 3saniye bitenden sonra yene baslasin*/
+    /*vaxt kecidleri-linear(sabit xett uzre,donma olmur,stabil gedir)
+                    -ease-in(yavas baslayir verdiyim vaxt sona dogru suretlenir)
+                    -ease-in-out(yavas baslayir sona dogru suretlenir, orta ve sonun deyeri eynidir)
+                    -ease-out(suretli baslayir, yavasiyir, sonra yeniden suretlenir)*/
+}
+
+@keyframes myanimation{
+    // // from-to neden neye 
+    // // %
+    // from{
+    //     background-color:aqua;
+    // }
+    // to{
+    //     background-color: yellow;
+    //     border-radius: 100%;
+    // }
+    0%{                                        /*baslayanda aqua*/
+        background-color: aqua;
+    }
+    50%{
+        background-color: yellow;               /*3san ortasinda 1.5san sari*/
+        top: 0;
+        left: 100%;
+    }
+    100%{
+        background-color: aqua;               /*3san tamaminda sona dogru aqua*/
+    }
+}

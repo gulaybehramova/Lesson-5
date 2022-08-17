@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#first {
+  width: 300px;
+  height: 300px;
+  background-color: aqua;
+  -webkit-animation: myanimation 3s linear infinite;
+          animation: myanimation 3s linear infinite;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /*ad,saniye,infinite-sonsuz, yeni 3saniye bitenden sonra yene baslasin*/
+  /*vaxt kecidleri-linear(sabit xett uzre,donma olmur,stabil gedir)
+                  -ease-in(yavas baslayir verdiyim vaxt sona dogru suretlenir)
+                  -ease-in-out(yavas baslayir sona dogru suretlenir, orta ve sonun deyeri eynidir)
+                  -ease-out(suretli baslayir, yavasiyir, sonra yeniden suretlenir)*/
+}
+
+@-webkit-keyframes myanimation {
+  0% { /*baslayanda aqua*/
+    background-color: aqua;
+  }
+  50% {
+    background-color: yellow; /*3san ortasinda 1.5san sari*/
+    top: 0;
+    left: 100%;
+  }
+  100% {
+    background-color: aqua; /*3san tamaminda sona dogru aqua*/
+  }
+}
+
+@keyframes myanimation {
+  0% { /*baslayanda aqua*/
+    background-color: aqua;
+  }
+  50% {
+    background-color: yellow; /*3san ortasinda 1.5san sari*/
+    top: 0;
+    left: 100%;
+  }
+  100% {
+    background-color: aqua; /*3san tamaminda sona dogru aqua*/
+  }
+}/*# sourceMappingURL=style.css.map */
